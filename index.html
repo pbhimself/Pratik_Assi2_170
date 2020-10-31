@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventista</title>
+        <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="bundle.js"></script>    
+    <script src="shift.js"></script>
+        
+        
+
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="Navbar">
+                <ul class="navbar-nav mr-auto">
+                    <li id="btn1" class="nav-item active"><a class="nav-link" onclick="page_selector('Page1','Page2','Page3');myFunction();" href="#"></span> Home</a></li>
+                    <li id="btn2" class="nav-item"><a class="nav-link" onclick="page_selector('Page2','Page1','Page3'); myFunction2();" href="#">Add Event</a></li>
+                    <li id="btn3" class="nav-item"><a class="nav-link" onclick="page_selector('Page3','Page2','Page1');myFunction3();" href="#" href="#">Show Events</a></li>
+    
+                </ul>
+            </div>
+            
+        </div>
+    </nav>
+    <div id="Page1">
+         <header class="jumbotron">
+            <div class="container">
+                <div class="row row-header">
+                    <div class="welcome">
+                        <h1>Welcome to <span class="title">Eventista</span></h1>
+                        <p>View and register events!</p>
+                    </div>
+                    <div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section id="about" class="about">
+          <div class="container" data-aos="fade-up">
+
+            <div class="row">
+              <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
+                <div class="about-img">
+                  <img src="about.jpg" alt="">
+                </div>
+              </div>
+              <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+                <h3>Event 1 name</h3>
+                <p class="font-italic">
+                  A few lines about the event
+                </p>
+                <ul>
+                  <li>Date</li>
+                  <li>Time</li>
+                  <li>Place</li>
+                </ul>
+                <p>
+                  Invitation message
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </section>
+        <section id="about" class="about">
+          <div class="container" data-aos="fade-up">
+
+            <div class="row">
+              <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
+                <div class="about-img">
+                  <img src="about.jpg" alt="">
+                </div>
+              </div>
+              <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+                <h3>Event 2 name</h3>
+                <p class="font-italic">
+                  A few lines about the event
+                </p>
+                <ul>
+                  <li>Date</li>
+                  <li>Time</li>
+                  <li>Place</li>
+                </ul>
+                <p>
+                  Invitation message
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </section>
+    </div>
+    <div id="Page2" style="display: none;">
+        <form>
+            <div class="formBox">
+                <input type="text" id="eName" placeholder="Event name">
+            </div>
+            <div class="formBox">
+                <input type="Date" id="date" placeholder="Date">
+            </div>
+            <div class="formBox">
+                <select name="City" id="city">
+                  <option value="select"hidden>Select city</option>
+                  <option value="Mumbai">Mumbai</option>
+                  <option value="Thane">Thane</option>
+                  <option value="Pune">Pune</option>
+                  <option value="Surat">Surat</option>
+                  <option value="Delhi">Delhi</option>
+                  <option value="Lucknow">Lucknow</option>
+                </select>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Paid">
+              <label class="form-check-label" for="inlineRadio2">Paid</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Unpaid">
+              <label class="form-check-label" for="inlineRadio1">Unpaid</label>
+            </div><br>
+            <div class="formBox">
+                <textarea id="about"=value ="about"placeholder="About Event(Optional)"></textarea> <br>
+            </div><br>
+            <div class="formBox">
+              <button id="btn" class="button" onclick="formValidate()">Upload</button>
+            </div>
+        </form>
+      </div>
+    
+      <div id="Page3" style="display:none">
+        <table class="table table-striped">
+            <tr  class="bg-light">
+                <th>Timestamp</th>
+                <th>Name</th>
+                <th>Date</th>
+                <th>City</th>
+                <th>Fees</th>  
+                <th>About</th>              
+            </tr>
+        
+            <tbody id="myTable">
+                
+            </tbody>
+        </table>         
+      </div>
+
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
